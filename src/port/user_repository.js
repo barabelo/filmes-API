@@ -1,4 +1,5 @@
 const { UserModel } = require('../infrastructure/database');
+const Constants = require("../utils/constants.js");
 
 const UserRepository = {
     async create(data) {
@@ -37,7 +38,10 @@ const UserRepository = {
 
     async getByEmail(data) {
         try {
-            const result = await UserModel.findOne({ email: data.email }).exec();
+            let result = await UserModel.findOne({ email: data.email }).exec();
+            if (result == null) {
+                result = Constants.ErrorNotFound.name;
+            }
             return result;
         } catch (e) {
             return e;
