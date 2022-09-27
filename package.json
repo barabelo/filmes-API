@@ -1,5 +1,5 @@
 {
-  "name": "basic-api",
+  "name": "film-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
