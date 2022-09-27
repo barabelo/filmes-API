@@ -9,7 +9,7 @@ mongoose.connect(uri, {
 
 const {Schema} = mongoose;
 
-const UserSchema = new Schema({
+const FilmSchema = new Schema({
     id: {
         type: String,
         index: true,
@@ -21,8 +21,8 @@ const UserSchema = new Schema({
     ano: Number
 });
 
-const UserModel = mongoose.model('UserModel', UserSchema);
+const FilmModel = mongoose.model('FilmModel', FilmSchema);
 
 module.exports = {
-    UserModel,
+    FilmModel,
 };
