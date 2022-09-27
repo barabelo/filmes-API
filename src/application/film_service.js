@@ -2,7 +2,7 @@ const validate = require('validate.js');
 
 const Utils = require('../utils/utils');
 const Constants = require('../utils/constants');
-const UserRepository = require('../port/user_repository');
+const UserRepository = require('../port/film_repository');
 const Constraints = require('../utils/film_validation');
 const Validation = require('../utils/validation');
 
@@ -62,7 +62,7 @@ const User = {
         }
     },
 
-    async listByEmail(data) {
+    async listById(data) {
         try {
             const validation = validate.validate(data, Constraints.get);
             if (validation) {
@@ -71,7 +71,7 @@ const User = {
                 return response;
             }
 
-            return await UserRepository.getByEmail(data);
+            return await UserRepository.getById(data);
         } catch (error) {
             return error;
         }

@@ -1,7 +1,7 @@
 const { FilmModel } = require('../infrastructure/database');
 const Constants = require("../utils/constants.js");
 
-const UserRepository = {
+const FilmRepository = {
     async create(data) {
         try {
             const model = new FilmModel(data);
@@ -45,7 +45,7 @@ const UserRepository = {
         }
     },
 
-    async getByEmail(data) {
+    async getById(data) {
         try {
             let result = await FilmModel.findOne({ nome: data.nome }).exec();
             if (result == null) {
@@ -67,4 +67,4 @@ const UserRepository = {
     },
 };
 
-module.exports = UserRepository;
+module.exports = FilmRepository;
