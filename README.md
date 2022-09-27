@@ -1,22 +1,23 @@
-<h1 align="center"> Basic API </h1>
+<h1 align="center"> Filmes API </h1>
 
 ## 📝 Descrição <a name="Descrição"></a>
 
-Esse repositório, consiste na implementação de um CRUD de usuários no qual será submetido a testes para validação do conhecimento da utilização destes testes.
+Esse repositório, consiste na implementação de um CRUD de filmes. Cada filme possui um nome, um gênero, uma lista de atores e o ano de lançamento.
 <br>
 
 ## 📥 Requisitos <a name="Requisitos"></a>
-1. Instalar o [Node.JS](https://nodejs.org/en/download/).
-2. Utilizei o [Visual Studio Code](https://code.visualstudio.com/) mas também é possível utilizar outro editor de sua preferência.
+Instalar o [Node.JS](https://nodejs.org/en/download/).
 
-## 🧩 Como executar <a name="Como-executar"></a>
-1. Utilizando o terminal do Git Bash, clone o repositório em sua máquina através do seguinte comando:
-    ```
-    $ git clone https://github.com/IagoCB/basic-API.git
-    ```
-    ```
-    $ git clone git@github.com:IagoCB/basic-API.git
-    ```
+## 🚀 Como executar <a name="Como-executar"></a>
+1. Utilizando o terminal do Git Bash, clone o repositório em sua máquina através de um dos seguintes comandos:
+   1. Usando HTTPS:
+       ```
+       $ git clone https://github.com/barabelo/filmes-API.git
+       ```
+   2. Usando SSH:
+       ```
+       $ git git@github.com:barabelo/filmes-API.git
+       ```
 
 2. No diretório do projeto, utilize o comando a seguir para instalar as dependências:
     ```
