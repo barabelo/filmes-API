@@ -29,8 +29,7 @@ const UserRepository = {
 
     async list() {
         try {
-            const result = await UserModel.find().exec();
-            return result;
+            return await UserModel.find().exec();
         } catch (error) {
             return error;
         }
@@ -38,7 +37,7 @@ const UserRepository = {
 
     async getByEmail(data) {
         try {
-            let result = await UserModel.findOne({ email: data.atores }).exec();
+            let result = await UserModel.findOne({ nome: data.nome }).exec();
             if (result == null) {
                 result = Constants.ErrorNotFound.name;
             }

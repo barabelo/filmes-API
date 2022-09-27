@@ -38,11 +38,11 @@ const update = {
 };
 
 const get = {
-    atores: {
+    nome: {
         presence: {
             allowEmpty: false,
         },
-        type: 'array',
+        type: 'string',
     },
 };
 
