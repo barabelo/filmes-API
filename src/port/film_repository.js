@@ -1,4 +1,4 @@
-const { FilmModel } = require('../infrastructure/database');
+const {FilmModel} = require('../infrastructure/database');
 const Constants = require("../utils/constants.js");
 
 const FilmRepository = {
@@ -27,8 +27,8 @@ const FilmRepository = {
                 update.ano = data.ano;
             }
 
-            const options = { new: true };
-            const filter = { id: data.id };
+            const options = {new: true};
+            const filter = {id: data.id};
             const result = await FilmModel.findOneAndUpdate(filter, update, options).exec();
             if (result === null) return []
             return result.toObject();
@@ -47,7 +47,7 @@ const FilmRepository = {
 
     async getById(data) {
         try {
-            let result = await FilmModel.findOne({ nome: data.nome }).exec();
+            let result = await FilmModel.findOne({nome: data.nome}).exec();
             if (result == null) {
                 result = Constants.ErrorNotFound.name;
             }
@@ -59,7 +59,7 @@ const FilmRepository = {
 
     async delete(data) {
         try {
-            const result = await FilmModel.deleteOne({ id: data.id }).exec();
+            const result = await FilmModel.deleteOne({id: data.id}).exec();
             return result.deletedCount;
         } catch (error) {
             return error;

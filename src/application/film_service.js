@@ -2,7 +2,7 @@ const validate = require('validate.js');
 
 const Utils = require('../utils/utils');
 const Constants = require('../utils/constants');
-const UserRepository = require('../port/film_repository');
+const FilmRepository = require('../port/film_repository');
 const Constraints = require('../utils/film_validation');
 const Validation = require('../utils/validation');
 
@@ -16,7 +16,7 @@ const User = {
 
             data.id = Utils.generateUuid();
 
-            const response = await UserRepository.create(data);
+            const response = await FilmRepository.create(data);
 
             if (response.code === 11000) {
                 return Constants.ErrorDuplicate;
@@ -36,7 +36,7 @@ const User = {
                 return response;
             }
 
-            const response = await UserRepository.update(data);
+            const response = await FilmRepository.update(data);
 
             if (response === []) {
                 return Constants.ErrorNotFound;
@@ -56,7 +56,7 @@ const User = {
                 return response;
             }
 
-            return await UserRepository.delete(data);
+            return await FilmRepository.delete(data);
         } catch (error) {
             return error;
         }
@@ -71,7 +71,7 @@ const User = {
                 return response;
             }
 
-            return await UserRepository.getById(data);
+            return await FilmRepository.getById(data);
         } catch (error) {
             return error;
         }
@@ -79,7 +79,7 @@ const User = {
 
     async list() {
         try {
-            return await UserRepository.list();
+            return await FilmRepository.list();
         } catch (error) {
             return error;
         }

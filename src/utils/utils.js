@@ -1,5 +1,5 @@
-const { StatusCodes } = require('http-status-codes');
-const { v4: uuidv4 } = require('uuid');
+const {StatusCodes} = require('http-status-codes');
+const {v4: uuidv4} = require('uuid');
 
 const Constants = require('./constants');
 
@@ -19,7 +19,7 @@ const Utils = {
         }
     },
 
-    generateUuid(){
+    generateUuid() {
         return uuidv4();
     },
 };
