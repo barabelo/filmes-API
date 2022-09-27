@@ -47,7 +47,7 @@ const get = {
 };
 
 const deleteBy = {
-    nome: {
+    id: {
         presence: {
             allowEmpty: false,
         },

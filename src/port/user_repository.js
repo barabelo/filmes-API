@@ -49,7 +49,7 @@ const UserRepository = {
 
     async delete(data) {
         try {
-            const result = await UserModel.deleteOne({ nome: data.nome }).exec();
+            const result = await UserModel.deleteOne({ id: data.id }).exec();
             return result.deletedCount;
         } catch (error) {
             return error;
