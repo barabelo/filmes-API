@@ -20,7 +20,7 @@ it('CREATE - Filme válido', async () => {
     expect(result).toEqual(data);
 })
 
-it('CREATE - Filme sem um parâmetro obrigatório (nome)', async () => {
+it('CREATE - Filme sem um campo obrigatório (nome)', async () => {
     const data = {
         genero: "Ação e Aventura",
         atores: ["Chris Pratt", "Bryce Dallas Howard", "Laura Dern", "Jeff Goldblum", "Sam Neill"],
@@ -34,7 +34,7 @@ it('CREATE - Filme sem um parâmetro obrigatório (nome)', async () => {
     expect(result).toEqual(Constants.ErrorValidation);
 })
 
-it('CREATE - Filme sem um parâmetro não obrigatório (atores)', async () => {
+it('CREATE - Filme sem um campo não obrigatório (atores)', async () => {
     const data = {
         nome: "Jurassic World Domínio",
         genero: "Ação e Aventura",
@@ -48,7 +48,7 @@ it('CREATE - Filme sem um parâmetro não obrigatório (atores)', async () => {
     expect(result).toEqual(data);
 })
 
-it('CREATE - Filme com um parâmetro inválido (ano como String)', async () => {
+it('CREATE - Filme com um campo inválido (ano como String)', async () => {
     const data = {
         genero: "Ação e Aventura",
         atores: ["Chris Pratt", "Bryce Dallas Howard", "Laura Dern", "Jeff Goldblum", "Sam Neill"],

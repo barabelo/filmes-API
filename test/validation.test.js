@@ -11,7 +11,7 @@ it('Criar filme válido', () => {
     expect(result).toEqual(undefined);
 });
 
-it('Criar filme sem parâmetro obrigatório (nome)', () => {
+it('Criar filme sem um campo obrigatório (nome)', () => {
     const result = Validation.create({
         genero: "Ação e Aventura",
         atores: ["Chris Pratt", "Bryce Dallas Howard", "Laura Dern", "Jeff Goldblum", "Sam Neill"],
@@ -20,7 +20,7 @@ it('Criar filme sem parâmetro obrigatório (nome)', () => {
     expect(result.name).toEqual(Constants.ErrorValidation.name);
 });
 
-it('Criar filme com um parâmetro inválido (ano como string)', () => {
+it('Criar filme com um campo inválido (ano como string)', () => {
     const result = Validation.create({
         genero: "Ação e Aventura",
         atores: ["Chris Pratt", "Bryce Dallas Howard", "Laura Dern", "Jeff Goldblum", "Sam Neill"],
