@@ -12,10 +12,13 @@ const create = {
         type: 'string',
     },
     atores: {
+        type: 'array',
+    },
+    ano: {
         presence: {
             allowEmpty: false,
         },
-        type: 'array',
+        type: 'number',
     },
 };
 

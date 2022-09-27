@@ -18,6 +18,7 @@ const UserSchema = new Schema({
     nome: String,
     genero: String,
     atores: Array,
+    ano: Number
 });
 
 const UserModel = mongoose.model('UserModel', UserSchema);
