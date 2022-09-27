@@ -2,7 +2,7 @@
 
 ## 📝 Descrição <a name="Descrição"></a>
 
-Esse repositório, consiste na implementação de um CRUD de filmes. Cada filme possui um nome, um gênero, uma lista de atores e o ano de lançamento.
+Esse programa consiste na implementação de uma API REST para um CRUD de filmes. Cada filme possui um nome, um gênero, uma lista de atores e o ano de lançamento. O repositório [basic-API](https://github.com/IagoCB/basic-API) foi utilizado como template para este programa.
 <br>
 
 ## 📥 Requisitos <a name="Requisitos"></a>
