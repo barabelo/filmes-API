@@ -1,4 +1,4 @@
-const Users = require('../src/application/user_service');
+const Users = require('../src/application/film_service');
 const Constants = require('../src/utils/constants');
 const Utils = require('../src/utils/utils');
 const UsersRepository = require('../src/port/user_repository');
