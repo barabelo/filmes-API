@@ -7,7 +7,7 @@ describe('create', () => {
             toObject: () => ({
                 id: 1,
                 nome: "João",
-                email: "joao@inatel.br",
+                atores: "joao@inatel.br",
                 genero: "123456789",
             }),
         }));
@@ -15,7 +15,7 @@ describe('create', () => {
         expect(await user.create({
             id: 1,
             nome: "João",
-            email: "joao@inatel.br",
+            atores: "joao@inatel.br",
             genero: "123456789"
         })).toEqual(
             expect.objectContaining({

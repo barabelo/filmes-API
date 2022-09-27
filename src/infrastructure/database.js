@@ -7,7 +7,7 @@ mongoose.connect(uri, {
     useUnifiedTopology: true,
 });
 
-const { Schema } = mongoose;
+const {Schema} = mongoose;
 
 const UserSchema = new Schema({
     id: {
@@ -17,10 +17,7 @@ const UserSchema = new Schema({
     },
     nome: String,
     genero: String,
-    email: {
-        type: String,
-        unique: true,
-    },
+    atores: Array,
 });
 
 const UserModel = mongoose.model('UserModel', UserSchema);

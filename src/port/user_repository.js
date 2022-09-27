@@ -18,7 +18,7 @@ const UserRepository = {
                 nome: data.nome,
             };
             const options = { new: true };
-            const filter = { email: data.email };
+            const filter = { email: data.atores };
             const result = await UserModel.findOneAndUpdate(filter, update, options).exec();
             if (result === null) return []
             return result.toObject();
@@ -38,7 +38,7 @@ const UserRepository = {
 
     async getByEmail(data) {
         try {
-            let result = await UserModel.findOne({ email: data.email }).exec();
+            let result = await UserModel.findOne({ email: data.atores }).exec();
             if (result == null) {
                 result = Constants.ErrorNotFound.name;
             }
@@ -50,7 +50,7 @@ const UserRepository = {
 
     async delete(data) {
         try {
-            const result = await UserModel.deleteOne({ email: data.email }).exec();
+            const result = await UserModel.deleteOne({ email: data.atores }).exec();
             return result.deletedCount;
         } catch (error) {
             return error;

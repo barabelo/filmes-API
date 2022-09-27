@@ -5,17 +5,17 @@ const create = {
         },
         type: 'string',
     },
-    email: {
-        presence: {
-            allowEmpty: false,
-        },
-        type: 'string',
-    },
     genero: {
         presence: {
             allowEmpty: false,
         },
         type: 'string',
+    },
+    atores: {
+        presence: {
+            allowEmpty: false,
+        },
+        type: 'array',
     },
 };
 
@@ -26,29 +26,29 @@ const update = {
         },
         type: 'string',
     },
-    email: {
+    atores: {
         presence: {
             allowEmpty: false,
         },
-        type: 'string',
+        type: 'array',
     },
 };
 
 const get = {
-    email: {
+    atores: {
         presence: {
             allowEmpty: false,
         },
-        type: 'string',
+        type: 'array',
     },
 };
 
 const deleteBy = {
-    email: {
+    atores: {
         presence: {
             allowEmpty: false,
         },
-        type: 'string',
+        type: 'array',
     },
 };
 
