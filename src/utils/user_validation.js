@@ -47,11 +47,11 @@ const get = {
 };
 
 const deleteBy = {
-    atores: {
+    nome: {
         presence: {
             allowEmpty: false,
         },
-        type: 'array',
+        type: 'string',
     },
 };
 
