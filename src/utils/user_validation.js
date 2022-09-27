@@ -11,7 +11,7 @@ const create = {
         },
         type: 'string',
     },
-    senha: {
+    genero: {
         presence: {
             allowEmpty: false,
         },

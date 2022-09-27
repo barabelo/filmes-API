@@ -15,12 +15,12 @@ const UserSchema = new Schema({
         index: true,
         unique: true,
     },
+    nome: String,
+    genero: String,
     email: {
         type: String,
         unique: true,
     },
-    nome: String,
-    senha: String,
 });
 
 const UserModel = mongoose.model('UserModel', UserSchema);

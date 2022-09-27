@@ -8,7 +8,7 @@ describe('create', () => {
                 id: 1,
                 nome: "João",
                 email: "joao@inatel.br",
-                senha: "123456789",
+                genero: "123456789",
             }),
         }));
 
@@ -16,7 +16,7 @@ describe('create', () => {
             id: 1,
             nome: "João",
             email: "joao@inatel.br",
-            senha: "123456789"
+            genero: "123456789"
         })).toEqual(
             expect.objectContaining({
                 id: expect.any(Number),

@@ -9,7 +9,7 @@ it('CREATE - Dado válido', async () => {
     const data = {
         nome: "João",
         email: "joao@inatel.br",
-        senha: "123456789"
+        genero: "123456789"
     }
 
     const id = Utils.generateUuid();
@@ -24,7 +24,7 @@ it('CREATE - Dado duplicado', async () => {
     const data = {
         nome: "João",
         email: "joao@inatel.br",
-        senha: "123456789"
+        genero: "123456789"
     }
 
     const id = Utils.generateUuid();
