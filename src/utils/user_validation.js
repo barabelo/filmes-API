@@ -23,17 +23,26 @@ const create = {
 };
 
 const update = {
+    id: {
+        presence: {
+            allowEmpty: false,
+        },
+        type: 'string',
+    },
     nome: {
         presence: {
             allowEmpty: false,
         },
         type: 'string',
     },
+    genero: {
+        type: 'string',
+    },
     atores: {
-        presence: {
-            allowEmpty: false,
-        },
         type: 'array',
+    },
+    ano: {
+        type: 'number',
     },
 };
 

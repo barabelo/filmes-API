@@ -17,8 +17,18 @@ const UserRepository = {
             const update = {
                 nome: data.nome,
             };
+            if (data.atores !== undefined) {
+                update.atores = data.atores;
+            }
+            if (data.genero !== undefined) {
+                update.genero = data.genero;
+            }
+            if (data.ano !== undefined) {
+                update.ano = data.ano;
+            }
+
             const options = { new: true };
-            const filter = { email: data.atores };
+            const filter = { id: data.id };
             const result = await UserModel.findOneAndUpdate(filter, update, options).exec();
             if (result === null) return []
             return result.toObject();
