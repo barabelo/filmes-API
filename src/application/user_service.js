@@ -19,8 +19,7 @@ const User = {
             const response = await UserRepository.create(data);
 
             if (response.code === 11000) {
-                const result = Constants.ErrorDuplicate;
-                return result;
+                return Constants.ErrorDuplicate;
             }
             return response;
         } catch (error) {
@@ -40,8 +39,7 @@ const User = {
             const response = await UserRepository.update(data);
 
             if (response === []) {
-                const result = Constants.ErrorNotFound;
-                return result;
+                return Constants.ErrorNotFound;
             }
             return response;
         } catch (error) {
@@ -58,9 +56,7 @@ const User = {
                 return response;
             }
 
-            const response = await UserRepository.delete(data);
-
-            return response;
+            return await UserRepository.delete(data);
         } catch (error) {
             return error;
         }
@@ -75,9 +71,7 @@ const User = {
                 return response;
             }
 
-            const response = await UserRepository.getByEmail(data);
-
-            return response;
+            return await UserRepository.getByEmail(data);
         } catch (error) {
             return error;
         }
@@ -85,9 +79,7 @@ const User = {
 
     async list() {
         try {
-            const response = await UserRepository.list();
-
-            return response;
+            return await UserRepository.list();
         } catch (error) {
             return error;
         }
